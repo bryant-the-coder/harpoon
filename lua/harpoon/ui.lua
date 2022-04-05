@@ -31,11 +31,11 @@ local function create_window()
     local width = config.width or 60
     local height = config.height or 10
     local borderchars = config.borderchars
-        or { "─", "│", "─", "│", "╭", "╮", "╯", "╰" }
+        or { "═", "║", "═", "║", "╔", "╗", "╝", "╚" }
     local bufnr = vim.api.nvim_create_buf(false, false)
 
     local Harpoon_win_id, win = popup.create(bufnr, {
-        title = "Harpoon",
+        title = "File Location",
         highlight = "HarpoonWindow",
         line = math.floor(((vim.o.lines - height) / 2) - 1),
         col = math.floor((vim.o.columns - width) / 2),
