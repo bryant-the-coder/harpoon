@@ -31,7 +31,7 @@ local function create_window()
     local width = config.width or 60
     local height = config.height or 10
     local borderchars = config.borderchars
-        or { "═", "║", "═", "║", "╔", "╗", "╝", "╚" }
+        or { "─", "│", "─", "│", "╭", "╮", "╯", "╰" }
     local bufnr = vim.api.nvim_create_buf(false, false)
 
     local Harpoon_win_id, win = popup.create(bufnr, {
